@@ -1,0 +1,52 @@
+.menu {
+  padding: 0 18px;
+  height: 45px;
+  width: 100%;
+  background: $grey;
+  color: $grey;
+
+  &__container {
+    @include isFlex($align: center, $justify: space-between, $wrap: nowrap);
+    height: 45px;
+  }
+
+  &__list {
+    @include isFlex($justify: flex-start, $wrap: nowrap);
+
+    &_left {
+      max-width: 605px;
+    }
+
+    &_right {
+      width: calc(186px + 156px);
+    }
+  }
+
+  &__item {
+    margin-right: 14px;
+    white-space: nowrap;
+  }
+
+  &__link {
+    color: $grey-text;
+    font-size: 14px;
+    transition: 0.2s;
+
+    &:hover {
+      color: $red;
+    }
+  }
+
+  &__btn {
+    outline: none;
+    color: #fff;
+    padding: 5px 14px;
+    border-radius: 3px;
+    background: rgba($blue, 0.8) !important;
+
+    &:hover {
+      color: #fff;
+      background: rgba($blue, 1) !important;
+    }
+  }
+}

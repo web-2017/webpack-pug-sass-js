@@ -9,9 +9,18 @@ body {
   height: 100%;
 }
 body {
-  @include container(1200);
-  font-family: $quicksand;
+  @include container(2000);
+  // font-family: $quicksand;
   // background: $darkslategray;
+  background-color: #fff;
+  color: #000;
+  font: 13px/1.5 $quicksand, sans-serif;
+}
+
+.container {
+  @include container(964);
+  width: 100%;
+  margin: 0 auto;
 }
 h1,
 h2,
@@ -23,6 +32,7 @@ h6 {
 }
 a {
   text-decoration: none;
+  display: inline-block;
 }
 p {
   margin: 0;
@@ -33,4 +43,12 @@ ul {
 }
 li {
   list-style: none;
+}
+
+.blue {
+  color: $blue;
+}
+
+.bg-blue {
+  background: $blue;
 }

@@ -8,17 +8,10 @@ block basicSeo
   meta(name='keywords', content='main page, home page')
   meta(name='author' content='Mario Dev')
 
-block links
-  link(href='')
-
 block content
+  link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" )
 
-  //- Desktop page
+
   section.page
-    h1 # Home page
-     
-  .div
-    a(href="blog") Blog page
-
-    ul#list
-      li.list dd
+    //- header
+    include ./components/header/header.pug
