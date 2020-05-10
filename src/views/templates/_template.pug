@@ -1,0 +1,54 @@
+//- _template layout
+
+doctype html
+html(lang='ru')
+  head
+
+    //- Meta
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+    //- SEO
+
+    //- Basic Seo
+    block basicSeo
+      meta(name='description' content='Index page')
+      meta(name='keywords', content='index, page')
+      meta(name='author' content='')
+    
+    block links
+      link(href='')
+
+    //- Favicons
+    link(rel='apple-touch-icon', sizes='180x180', href=require('images/favicons/apple-touch-icon.png'))
+    link(rel='icon', type='image/png', sizes='32x32', href=require('images/favicons/favicon-32x32.png'))
+    link(rel='icon', type='image/png', sizes='16x16', href=require('images/favicons/favicon-16x16.png'))
+    link(rel='shortcut icon', href=require('images/favicons/favicon.ico'))
+
+    //- font-awesome
+    link(src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" )
+
+    //- Preload fonts
+    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Bold.woff'), rel='preload', as='font', crossorigin)
+    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Medium.woff'), rel='preload', as='font', crossorigin)
+    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Regular.woff'), rel='preload', as='font', crossorigin)
+    link(type='font/woff', href=require('source/assets/fonts/Quicksand-Light.woff'), rel='preload', as='font', crossorigin)
+
+    //- Title
+    block title
+      title Your project!
+
+    //- block manifestBrowserconfigFiles
+    //-   link(rel='manifest', href='./manifest.json')
+
+  body
+
+    //- block content
+    block content
+
+    //- Footer
+    include ../components/footer.pug
+      
+
+    //- block scripts
+    block scripts
