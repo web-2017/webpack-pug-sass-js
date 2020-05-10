@@ -2,6 +2,10 @@
 
 The purpose if this Webpack Starter is to allow people to create websites without frameworks/libraries like React, Angular, Vue only using simple but powerful technologies to build quality websites.
 
+## Link to this project
+
+- https://github.com/web-2017/webpack-pug-sass-js.git
+
 ## Technologies used
 
 - Templating: `Pug`
