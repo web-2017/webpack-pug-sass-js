@@ -1,0 +1,19 @@
+.header {
+  &__list {
+    @include isFlex($justify: flex-start);
+    list-style: none;
+    height: 48px;
+  }
+
+  &__item {
+    padding: 5px 12px 4px;
+  }
+
+  &__logo {
+    width: 115px;
+    height: 40px;
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+}

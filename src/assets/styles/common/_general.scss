@@ -22,6 +22,7 @@ body {
   width: 100%;
   margin: 0 auto;
 }
+
 h1,
 h2,
 h3,
@@ -51,4 +52,8 @@ li {
 
 .bg-blue {
   background: $blue;
+}
+
+.link {
+  @include link;
 }

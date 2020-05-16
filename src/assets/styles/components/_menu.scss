@@ -4,6 +4,7 @@
   width: 100%;
   background: $grey;
   color: $grey;
+  box-shadow: 0px 0px 2px #4e4e4e;
 
   &__container {
     @include isFlex($align: center, $justify: space-between, $wrap: nowrap);
