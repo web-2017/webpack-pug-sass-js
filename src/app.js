@@ -13,4 +13,6 @@ import "./assets/data/dummy.data";
 
 window.onload = function () {
   require("scripts/data");
+  require("scripts/header");
+  require("scripts/products");
 };

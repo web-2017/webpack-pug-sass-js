@@ -1,5 +1,4 @@
-// import { data } from "../data/dummy.data";
-
+import { data } from "../data/dummy.data";
 // let allData = [];
 
 // function getData(data) {
@@ -44,3 +43,5 @@
 //   data: allData,
 // });
 // newRender.render();
+
+console.log(data);

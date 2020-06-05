@@ -1,4 +1,27 @@
 .header {
+  position: static;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 100;
+
+  &_fixed {
+    animation: headerfixed 0.5s forwards;
+    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.1);
+  }
+
+  @keyframes headerfixed {
+    0% {
+      position: fixed;
+      top: -30px;
+    }
+    100% {
+      position: fixed;
+      top: 0;
+    }
+  }
+
   &__list {
     @include isFlex($justify: flex-start);
     list-style: none;

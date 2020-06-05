@@ -1,0 +1,21 @@
+.products {
+  &__list {
+    display: flex;
+    max-width: 655px;
+    justify-content: space-between;
+  }
+  &__item {
+    min-height: 215px;
+  }
+  &__title {
+  }
+  &__img {
+    max-width: 208px;
+    width: 100%;
+    height: 156px;
+  }
+  &__price {
+  }
+  &__desc {
+  }
+}
