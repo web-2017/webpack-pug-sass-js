@@ -9,6 +9,7 @@
 
 // Styles
 import "styles/_index.scss";
+import "./assets/data/dummy.data";
 
 window.onload = function () {
   require("scripts/data");

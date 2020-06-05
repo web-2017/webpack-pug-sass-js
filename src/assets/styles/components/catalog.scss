@@ -1,0 +1,27 @@
+.catalog {
+  &__total {
+    margin-bottom: 10px;
+    display: inline-block;
+  }
+
+  &__list {
+    display: flex;
+    height: 80px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+  }
+
+  &__item {
+    padding-right: 40px;
+    margin-bottom: 5px;
+  }
+
+  &__link {
+    &_span {
+      color: rgba(#000, 0.9);
+      padding-left: 5px;
+    }
+  }
+}
