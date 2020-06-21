@@ -1,67 +1,49 @@
-import { data } from "../data/dummy.data";
+import { productsData } from '../data/products.data'
 
-// const products = data.map((product) => {
-//   return product;
-// });
 
-function getProducts(param) {
-  let result;
-  try {
-    result = [...param];
-    return result;
-  } catch (error) {
-    console.log("Error", error);
-  }
-}
-
-// get data
-const products = getProducts(data);
-console.log(products);
+const products = [...productsData]
 
 class Products {
   constructor(options) {
-    this.getElem = options.getElem;
-    this.classNameLi = options.classNameLi;
-    this.classNameTitle = options.classNameTitle;
-    this.classNameImage = options.classNameImage;
-    this.classNamePrice = options.classNamePrice;
-    this.classNameOptions = options.classNameOptions;
-    this.data = options.data;
+    this.data = options.data
+    this.classParentElement = options.classParentElement
+    this.classElement = options.classElement
+    this.classTitle = options.classTitle
+    this.classImg = options.classImg
+    this.classPrice = options.classPrice
+    this.classCity = options.classCity
+    this.classDate = options.classDate
   }
 
-  render() {
-    let getElement = document.querySelector(this.getElem);
-    console.log(1, getElement);
-
-    this.data.map((product) => {
-      let img = product.srcImg
-        ? product.srcImg
-        : "https://lh3.googleusercontent.com/proxy/H7LmYzo7hvtn7gykM52TTU0xwV7Am23oHU1hYGnElAgnJ_3kyyeaMAjn0M8XMGtGZ3K1NTFQ-azC2byRhav4anQ9crBxQsfjfdHVVDiwjJW1j2Xd9siXUiUcXQ";
-
-      let year = product.year ? product.year : "";
-      getElement.innerHTML += `
-        <li class='${this.classNameLi}'>
-          <img class=${this.classNameImage} src=${img} />
-          <h3 class=${this.classNameTitle}>${product.title} ${year}</h3>
-          <p class=${this.classNamePrice}>${product.price}</p>
-          <p class=${this.classNameOptions}>${product.city}</p>
-          <p class=${this.classNameOptions}>${product.date}</p>
+  render(){
+    let elem = document.querySelector(this.classParentElement)
+    this.data.map(product => {
+      return elem.innerHTML += `
+        <li class=${this.classElement}>
+          <img class=${this.classImg} src=${product.src} alt='picture'/>
+          <h4 class=${this.classTitle}>${product.title}</h4>
+          <p class=${this.classPrice}>${product.price}</p>
+          <p class=${this.classCity}>${product.city}</p>
+          <p class=${this.classDate}>${product.date}</p>
         </li>
-      `;
-    });
+      `
+    })
   }
 }
 
-const cardShow = new Products({
-  getElem: "#categoryProduct",
+
+const productsRender = new Products({
   data: products,
-  classNameLi: "products__item",
-  classNameTitle: "products__title",
-  classNameImage: "products__img",
-  classNamePrice: "products__price",
-  classNameOptions: "products__desc",
-});
+  classParentElement: '#products_list',
+  classElement: 'products__item',
+  classImg: 'products__img',
+  classTitle: 'products__h4',
+  classPrice: 'products__price',
+  classCity: 'products__city',
+  classDate: 'products__date',
+})
 
-cardShow.render();
 
-console.log(cardShow);
+productsRender.render()
+console.log(productsRender);
+
